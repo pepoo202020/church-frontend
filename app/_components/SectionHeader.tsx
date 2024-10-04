@@ -9,12 +9,14 @@ interface SectionHeaderProps {
 
 export const SectionHeader: React.FC<SectionHeaderProps> = ({
   title,
-  color = "text-black", // Default color
+  color = "white", // Default color
   align = "center", // Default alignment
 }) => {
   return (
     <h1
-      className={`almarai lg:text-[51px] text-[38px] ${color} font-extrabold text-${align}`}
+      className={`almarai lg:text-[51px] text-[38px] ${
+        color === "white" ? "text-white" : "text-[#185BB7]"
+      } font-extrabold text-${align}`}
       style={{ textAlign: align }} // Apply text alignment dynamically
     >
       {title}
