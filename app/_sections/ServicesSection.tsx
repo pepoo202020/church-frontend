@@ -91,7 +91,7 @@ export default function ServicesSection() {
           <div className="absolute bottom-0 right-0 bg-[#185BB7]/60 w-full rounded-br-2xl rounded-bl-2xl flex flex-col items-center justify-center py-2 cursor-default px-2 lg:px-0 text-center gap-2 lg:gap-0">
             <Link
               href={services[currentIndex].serviceLink}
-              className="kufam text-white text-[12px] lg:text-[30px] font-black"
+              className="kufam text-white text-[8px] lg:text-[30px] font-black"
             >
               {services[currentIndex].serviceTitle}
             </Link>

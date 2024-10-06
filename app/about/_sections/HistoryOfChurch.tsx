@@ -1,5 +1,6 @@
 import { SectionHeader } from "@/app/_components/SectionHeader";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function HistoryOfChurch() {
@@ -18,12 +19,13 @@ export default function HistoryOfChurch() {
             الاستشهاد، وقد تمتعت أخته بذات الرؤيا، فعرفا أنها من الله وانطلقا
             بفرح ليتمتعا بما وهُب لهما.
           </p>
-          <button
+          <Link
             className="px-[79px] py-[10px] bg-[#185BB7] text-white lalezar-regular text-[40px] rounded-3xl transition duration-300 hover:bg-white hover:text-[#185BB7] hover:border-2 hover:border-[#185BB7]"
             aria-label="قراءة المزيد عن الشهيد ابادير واخته الشهيده ايريني"
+            href={"/about/church-history"}
           >
             قراءة المزيد
-          </button>
+          </Link>
         </div>
         <Image
           src="/image/historyImg.jpg"

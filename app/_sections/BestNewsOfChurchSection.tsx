@@ -44,7 +44,7 @@ export default function BestNewsOfChurchSection() {
         />
       </div>
       <div className="relative z-10 flex flex-col items-center pt-[28px] gap-[21px] pb-5 w-full">
-        <SectionHeader color="text-white" title="اهم اخبار الكنيسة" />
+        <SectionHeader color="white" title="اهم اخبار الكنيسة" />
         <div className="w-full flex flex-wrap items-center justify-center gap-[29px] mt-5 px-5 lg:px-0">
           {featuredNews.map((newsItem, index) => (
             <Link

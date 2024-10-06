@@ -1,6 +1,7 @@
 import React from "react";
 import { SectionHeader } from "../_components/SectionHeader";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function SaintOfChurchSection() {
   return (
@@ -8,7 +9,7 @@ export default function SaintOfChurchSection() {
       id="saint"
       className="w-full flex flex-col items-center justify-center pt-[28px] px-5 gap-[21px] pb-5 text-white bg-[#185BB7]"
     >
-      <SectionHeader color="text-white" title="شفيع الكنيسة" />
+      <SectionHeader color="white" title="شفيع الكنيسة" />
       <div className="w-full flex lg:flex-row flex-col items-center justify-center lg:gap-[85px] gap-[75px]">
         <Image
           src="/image/saintImage.png"
@@ -29,12 +30,13 @@ export default function SaintOfChurchSection() {
             الاستشهاد، وقد تمتعت أخته بذات الرؤيا، فعرفا أنها من الله وانطلقا
             بفرح ليتمتعا بما وهُب لهما.
           </p>
-          <button
+          <Link
             className="px-[79px] py-[10px] bg-white text-[#1E60BC] lalezar-regular text-[40px] rounded-3xl transition duration-300 hover:bg-[#1E60BC] hover:text-white"
             aria-label="قراءة المزيد عن الشهيد ابادير واخته الشهيده ايريني"
+            href={"/about/saint-story"}
           >
             قراءة المزيد
-          </button>
+          </Link>
         </div>
       </div>
     </section>

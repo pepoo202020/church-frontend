@@ -14,10 +14,10 @@ export default function FatherSays() {
     >
       <SectionHeader color="text-[#185BB7]" title="أقوال الاباء" />
       <div className="mt-7 mx-2 w-fit h-fit py-5 px-4 bg-[#70A7DF] max-w-[1049px] rounded-2xl drop-shadow-2xl flex flex-col items-center justify-center gap-5 transition-transform duration-300 lg:hover:scale-105 lg:hover:shadow-lg hover:scale-100 hover:shadow-lg">
-        <p className="font-bold almarai text-[50px] text-white text-center lg:text-[40px] md:text-[30px] sm:text-[24px]">
+        <p className="font-bold almarai text-[15px] text-white text-center lg:text-[50px] ">
           {body}
         </p>
-        <h1 className="font-black almarai text-[51px] text-[#FAFF00] lg:text-[40px] md:text-[30px] sm:text-[24px]">
+        <h1 className="font-black almarai text-[15px] text-[#FAFF00] lg:text-[40px] text-center">
           {name}
         </h1>
       </div>

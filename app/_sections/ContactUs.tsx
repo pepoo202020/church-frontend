@@ -22,7 +22,7 @@ export default function ContactUs() {
 
   return (
     <section className="w-fit lg:w-full flex flex-col items-center justify-center pt-[28px] overflow-hidden gap-[21px] pb-5 text-white bg-[#185BB7]">
-      <SectionHeader color="text-white" title="للتواصل معنا" />
+      <SectionHeader color="white" title="للتواصل معنا" />
       <div className="w-full flex flex-col lg:flex-row items-start justify-center lg:gap-5 gap-5 my-2 px-2">
         <div className="w-full lg:w-1/2 flex flex-col items-center lg:items-start gap-2">
           <p className="cairo text-[26px] font-light text-white text-center lg:text-start">

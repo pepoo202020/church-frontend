@@ -11,7 +11,7 @@ export default function ChurchScience() {
 
   return (
     <section className="w-full flex flex-col items-center justify-center pt-[28px] px-5 gap-[21px] pb-5 text-white bg-[#185BB7]">
-      <SectionHeader color="text-white" title="علوم الكنيسة" />
+      <SectionHeader color="white" title="علوم الكنيسة" />
       <div className="w-full mt-10 flex items-center justify-center flex-wrap gap-10">
         {sciences.map((item, index) => (
           <Link
