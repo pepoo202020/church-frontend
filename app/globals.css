@@ -62,3 +62,13 @@ html {
   font-weight: 400;
   font-style: normal;
 }
+
+.text-gray-300:hover {
+  transform: scale(1.1);
+  transition: transform 0.3s ease;
+}
+
+.flex-1:hover {
+  transform: translateY(-10px);
+  transition: transform 0.3s ease;
+}
