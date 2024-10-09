@@ -29,12 +29,12 @@ export default function WebsiteSections() {
       imageUrl: "/image/icons/booksIcon.png",
       link: "/library",
     },
-    {
+    /*{
       title: "علوم الكنيسة",
       subtitle: "طقس و قبطي و تاريخ الكنيسة",
       imageUrl: "/image/icons/scienceIcon.png",
       link: "/science",
-    },
+    }, */
     {
       title: "تواصل معنا",
       subtitle: "للتواصل مع الكنيسة ومع خدام الخدمات المختلفة",
