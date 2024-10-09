@@ -31,7 +31,7 @@ export default function HeroSection() {
         </h1>
         <h1 className="lemonada lg:text-[40px] text-[18px] font-bold text-center ">
           الموقع <span className="text-[#FAFF00]">الرسمي</span> لكنيسة الشهيد
-          ابادير واخته الشهيده ايريني
+          ابادير واخته الشهيده ايريني بأسيوط
         </h1>
       </div>
     </div>
