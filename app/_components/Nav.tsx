@@ -11,7 +11,7 @@ export default function Nav() {
     { name: "الخدمات", path: "/services" },
     { name: "اخبار الكنيسة", path: "/news" },
     { name: "المكتبه", path: "/library" },
-    { name: "علوم الكنيسة", path: "/science" },
+    //{ name: "علوم الكنيسة", path: "/science" },
     { name: "تواصل معنا", path: "/contact" },
   ];
 

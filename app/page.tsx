@@ -4,7 +4,7 @@ import SaintOfChurchSection from "./_sections/SaintOfChurchSection";
 import ServicesSection from "./_sections/ServicesSection";
 import BestNewsOfChurchSection from "./_sections/BestNewsOfChurchSection";
 import ChurchLibrary from "./_sections/ChurchLibrary";
-import ChurchScience from "./_sections/ChurchScience";
+//import ChurchScience from "./_sections/ChurchScience";
 import FatherSays from "./_sections/FatherSays";
 import ContactUs from "./_sections/ContactUs";
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       <ServicesSection />
       <BestNewsOfChurchSection />
       <ChurchLibrary />
-      <ChurchScience />
+      {/*<ChurchScience />*/}
       <FatherSays />
       <ContactUs />
     </main>
