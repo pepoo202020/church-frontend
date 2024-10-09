@@ -63,14 +63,14 @@ export default function News() {
     },
   ];
   const [currentPage, setCurrentPage] = useState<number>(1);
-  const servicesPerPage = 3;
+  const newsPerPage = 3;
   // calculate the index range for services to display
-  const indexOfLastService = currentPage * servicesPerPage;
-  const indexOfFirstService = indexOfLastService - servicesPerPage;
-  const currentNews = news.slice(indexOfFirstService, indexOfLastService);
+  const indexOfLastNew = currentPage * newsPerPage;
+  const indexOfFirstNew = indexOfLastNew - newsPerPage;
+  const currentNews = news.slice(indexOfFirstNew, indexOfLastNew);
 
   //calcaulate total pages
-  const totalPages = Math.ceil(news.length / servicesPerPage);
+  const totalPages = Math.ceil(news.length / newsPerPage);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
@@ -87,8 +87,8 @@ export default function News() {
       </SectionTitle>
       <div className="my-5  flex flex-col items-center justify-center gap-10 ">
         {currentNews.map((newItem, index) => (
-          <div key={index} className="">
-            <div className=" flex lg:flex-row flex-col items-center justify-center h-[500px] w-full mx-5 lg:h-[304px]  lg:w-[1120px]  overflow-hidden bg-[#D9D9D944] rounded-xl shadow-2xl drop-shadow-xl gap-5 lg:gap-0">
+          <div key={index}>
+            <div className=" flex lg:flex-row flex-col items-center justify-center h-[500px] w-full lg:mx-5 lg:h-[304px]  lg:w-[1120px]  overflow-hidden bg-[#D9D9D944] rounded-xl shadow-2xl drop-shadow-xl gap-5 lg:gap-0 transition-transform duration-300 transform hover:scale-105">
               <Image
                 src={newItem.image}
                 width={576}

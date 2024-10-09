@@ -149,7 +149,7 @@ export default function Services() {
       <div className="flex items-center justify-center flex-wrap w-full py-6 gap-10 lg:px-0 px-5">
         {currentServices.map((service, index) => (
           <div
-            className="lg:w-[579px] lg:h-[430px] w-full h-[200px] bg-cover rounded-2xl shadow-lg drop-shadow-lg overflow-hidden relative"
+            className="lg:w-[579px] lg:h-[430px] w-full h-[200px] bg-cover rounded-2xl shadow-lg drop-shadow-lg overflow-hidden relative transition-transform duration-300 transform hover:scale-105"
             key={index}
             style={{
               backgroundImage: `url(${service.serviceImg})`,
