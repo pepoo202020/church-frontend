@@ -17,7 +17,7 @@ export default function Header() {
 
   return (
     <>
-      <header className="flex flex-col items-center justify-center sticky top-0 z-50 bg-white w-full max-w-screen px-6 lg:px-10 py-2">
+      <header className="flex w-screen flex-col items-center justify-center sticky top-0 z-50 bg-white w-full max-w-screen px-6 lg:px-10 py-2">
         <div className="w-full hidden lg:flex items-center justify-between cairo text-sm font-bold">
           <BirthDate />
           <CopticDate />

@@ -13,11 +13,12 @@ export default function HistoryOfChurch() {
       <div className="w-full flex lg:flex-row flex-col items-center justify-center lg:gap-[85px] gap-[75px]">
         <div className="lg:w-[717px] w-full flex flex-col items-center justify-center gap-5">
           <p className="cairo text-[20px] lg:text-[28px] font-normal lg:text-justify text-center">
-            نشأتهما هما ابنا أخت باسيليوس الوزير الأنطاكي؛ تعين أبادير
-            إسفهسلارًا قائدًا عظيمًا في جيش دقلديانوس. ظهر له السيد المسيح في
-            رؤيا بالليل، وطلب منه أن يذهب مع أخته إيرائي إلى مصر لينالا إكليل
-            الاستشهاد، وقد تمتعت أخته بذات الرؤيا، فعرفا أنها من الله وانطلقا
-            بفرح ليتمتعا بما وهُب لهما.
+            تزخر إيبارشية أسيوط بالعديد من الكنائس والأديرة القبطية ذات التاريخ
+            العريق، والتي تضفي طابعًا روحانيًا وثقافيًا مميزًا على المنطقة. من
+            أبرز هذه الكنائس، كنيسة الشهيد أباذير وأخته الشهيدة إيريني، التي تقع
+            في منطقة غرب أسيوط. تُعد هذه الكنيسة شاهدة على تاريخ طويل من الإيمان
+            والتفاني، حيث تعتبر المنطقة التي تقع فيها الكنيسة هي أصل المدينة
+            القديمة،
           </p>
           <Link
             className="px-[79px] py-[10px] bg-[#185BB7] text-white lalezar-regular text-[40px] rounded-3xl transition duration-300 hover:bg-white hover:text-[#185BB7] hover:border-2 hover:border-[#185BB7]"

@@ -1,40 +1,9 @@
 import { SectionHeader } from "@/app/_components/SectionHeader";
+import { fathers } from "@/app/_data/fathers";
 
 import React from "react";
 
 export default function ChurchFathers() {
-  const fathers = [
-    {
-      name: "القمص توما يعقوب",
-      role: "الرتبة القمصية",
-      amount: "سنين الخدمة: 60 سنة",
-      image: "/image/toma.jpg",
-    },
-    {
-      name: "القمص ابرام ميساك",
-      role: "الرتبة القمصية",
-      amount: "سنين الخدمة: 60 سنة",
-      image: "/image/ebram.jpg",
-    },
-    {
-      name: "القس ساويروس عبده",
-      role: "الرتبة القسية",
-      amount: "سنين الخدمة: 60 سنة",
-      image: "/image/saweros.jpg",
-    },
-    {
-      name: "القس نوفير صبحي",
-      role: "الرتبة القسية",
-      amount: "سنين الخدمة: 60 سنة",
-      image: "/image/nofer.jpg",
-    },
-    {
-      name: "القس المتنيح بيتر توفيق",
-      role: "الرتبة القسية",
-      amount: "سنين الخدمة: 60 سنة",
-      image: "/image/peter.jpg",
-    },
-  ];
   return (
     <div
       id="fathers"
@@ -52,10 +21,9 @@ export default function ChurchFathers() {
               backgroundSize: "cover",
             }}
           >
-            <div className="w-full absolute h-1/3 bottom-0 left-0 bg-[#185BB7] text-white flex flex-col items-center justify-center gap-2">
+            <div className="w-full absolute h-[120px] bottom-0 left-0 bg-[#185BB7] text-white flex flex-col items-center justify-center gap-2">
               <h1 className="lalezar-regular text-[35px]">{item.name}</h1>
-              <h4 className="rakkas-regular text-[25px]">{item.role}</h4>
-              <p className="cairo">{item.amount}</p>
+              <p className="cairo">{item.date}</p>
             </div>
           </div>
         ))}

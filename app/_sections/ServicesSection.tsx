@@ -5,48 +5,11 @@ import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 import Image from "next/image";
 import Link from "next/link";
 import { CgClose } from "react-icons/cg";
-
-interface Service {
-  serviceImg: string;
-  serviceTitle: string;
-  serviceLink: string;
-  serviceSubtitle: string;
-}
+import { services } from "../_data/services";
 
 export default function ServicesSection() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
   const [hovered, setHovered] = useState<boolean>(false);
-
-  const services: Service[] = [
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة مدرسة الشهيد اسطفانوس للشمامسة",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة الميديا",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة هوس ايروف",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة القبطان",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-  ];
 
   useEffect(() => {
     const id = setInterval(() => {
@@ -78,7 +41,7 @@ export default function ServicesSection() {
         >
           <IoIosArrowRoundForward />
         </div>
-        <div className="w-full mx-5 lg:mx-0 lg:w-[1000px] overflow-hidden group cursor-pointer h-fit lg:h-[500px] relative text-white rounded-2xl transition-all duration-700">
+        <div className="w-full mx-5 lg:mx-0 lg:w-[1000px] overflow-hidden group cursor-pointer h-[250px] lg:h-[500px] relative text-white rounded-2xl transition-all duration-700">
           <Image
             src={services[currentIndex].serviceImg}
             alt={services[currentIndex].serviceTitle} // Improved alt text
@@ -98,7 +61,7 @@ export default function ServicesSection() {
             <p className="text-white cairo text-[11px] lg:text-[25px] font-light">
               {services[currentIndex].serviceSubtitle}
             </p>
-            <button className="px-[30px] py-[5px] bg-white text-[#1E60BC] lalezar-regular text-[25px] lg:text-[30px] rounded-3xl ">
+            <button className="px-[30px] py-[5px] mt-1 bg-white text-[#1E60BC] lalezar-regular text-[25px] lg:text-[30px] rounded-3xl ">
               قراءة المزيد
             </button>
           </div>

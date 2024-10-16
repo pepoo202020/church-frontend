@@ -2,34 +2,9 @@ import Image from "next/image";
 import React from "react";
 import { SectionHeader } from "../_components/SectionHeader";
 import Link from "next/link";
+import { news } from "../_data/news";
 
 export default function BestNewsOfChurchSection() {
-  const news = [
-    {
-      maintitle: "عيد الصعود",
-      subTitle: "اعياد ومناسبات",
-      logo: "/image/newLogo.png",
-      image: "/image/newBg01.png",
-      link: "/",
-      featured: true,
-    },
-    {
-      maintitle: "صوم الرسل",
-      subTitle: "اعياد ومناسبات",
-      logo: "/image/newLogo.png",
-      image: "/image/newBg03.png",
-      link: "/",
-      featured: true,
-    },
-    {
-      maintitle: "عيد حلول الروح القدس",
-      subTitle: "اعياد ومناسبات",
-      logo: "/image/newLogo.png",
-      image: "/image/newBg02.png",
-      link: "/",
-      featured: true,
-    },
-  ];
   const featuredNews = news.filter((item) => item.featured);
 
   return (
@@ -65,9 +40,9 @@ export default function BestNewsOfChurchSection() {
               <Image
                 src={newsItem.logo}
                 alt={`${newsItem.maintitle} logo`}
-                width={80}
-                height={98}
-                className="absolute top-2 left-2 z-[99]"
+                width={60}
+                height={60}
+                className="absolute top-5 left-5 z-[99]"
               />
               <div className="absolute bottom-0 left-0 w-full bg-white z-[999] py-5 px-5">
                 <h5 className="text-[#70A7DF] cairo font-black text-[27px] mb-3">

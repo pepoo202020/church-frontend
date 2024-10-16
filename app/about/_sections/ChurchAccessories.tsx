@@ -1,44 +1,12 @@
 "use client";
 import { SectionHeader } from "@/app/_components/SectionHeader";
+import { accessories } from "@/app/_data/accessories";
 import React, { useEffect, useState } from "react";
 import { IoIosArrowRoundBack, IoIosArrowRoundForward } from "react-icons/io";
 
 export default function ChurchAccessories() {
   const [currentIndex, setCurrentIndex] = useState<number>(0);
-  const accessories = [
-    {
-      serviceImg: "/image/historyImg.jpg",
-      serviceTitle: "مبنى الكنيسة",
-    },
-    {
-      serviceImg: "/image/historyImg.jpg",
-      serviceTitle: "مكتبة الكنيسة",
-    },
-    {
-      serviceImg: "/image/historyImg.jpg",
-      serviceTitle: "مشغل الكنيسة",
-    },
-    {
-      serviceImg: "/image/historyImg.jpg",
-      serviceTitle: "حضانة الكنيسة",
-    },
-    {
-      serviceImg: "/image/historyImg.jpg",
-      serviceTitle: "كانتين الكنيسة",
-    },
-    {
-      serviceImg: "/image/historyImg.jpg",
-      serviceTitle: "عيادات الكنيسة",
-    },
-    {
-      serviceImg: "/image/historyImg.jpg",
-      serviceTitle: "مكتب توظيف الكنيسة",
-    },
-    {
-      serviceImg: "/image/historyImg.jpg",
-      serviceTitle: "استوديو هوس ايروف",
-    },
-  ];
+
   useEffect(() => {
     const id = setInterval(() => {
       setCurrentIndex((prevIndex) =>
@@ -47,7 +15,7 @@ export default function ChurchAccessories() {
     }, 10000);
 
     return () => clearInterval(id);
-  }, [accessories.length]);
+  }, []);
 
   const changeService = (direction: "forward" | "backward") => {
     setCurrentIndex((prevIndex) => {
@@ -61,7 +29,7 @@ export default function ChurchAccessories() {
   return (
     <div
       id="accessories"
-      className="w-full flex flex-col items-center justify-center pt-[28px] px-5 gap-[21px] pb-5 text-white bg-[#185BB7]"
+      className="w-screen flex flex-col items-center justify-center pt-[28px] px-5 gap-[21px] pb-5 text-white bg-[#185BB7]"
     >
       <SectionHeader title="ملحقات الكنيسة" />
       <div className="w-full py-1 px-5 lg:px-0 flex items-center justify-center gap-[65px]">
@@ -79,13 +47,13 @@ export default function ChurchAccessories() {
                 key={index}
                 className="h-[497px] w-[300px] bg-cover relative rounded-3xl overflow-hidden"
                 style={{
-                  backgroundImage: `url('${item.serviceImg}')`,
+                  backgroundImage: `url('${item.image}')`,
                   backgroundPosition: "center",
                   backgroundSize: "cover",
                 }}
               >
-                <div className="w-full px-2 py-5 bg-[#1E60BC76] text-white kufam text-[20px] font-black text-center bottom-0 left-0 absolute">
-                  {item.serviceTitle}
+                <div className="w-full px-2 h-[100px] flex items-center justify-center bg-[#1E60BC76] text-white kufam text-[20px] font-black text-center bottom-0 left-0 absolute">
+                  {item.title}
                 </div>
               </div>
             ))}

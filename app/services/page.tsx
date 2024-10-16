@@ -3,123 +3,9 @@ import React, { useState } from "react";
 import SectionTitle from "../_components/SectionTitle";
 import { SectionHeader } from "../_components/SectionHeader";
 import Pagentation from "../_components/Pagentation";
+import { services } from "../_data/services";
 
 export default function Services() {
-  const services = [
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة مدرسة الشهيد اسطفانوس للشمامسة",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة الميديا",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة هوس ايروف",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة القبطان",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة المحبة",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة التربية الكنسية",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة الرعاية",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة الإفتقاد",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة مدرسة الشهيد اسطفانوس للشمامسة",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة الميديا",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة هوس ايروف",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة القبطان",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة المحبة",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة التربية الكنسية",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة الرعاية",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-    {
-      serviceImg: "/image/shamamsaImage.jpg",
-      serviceTitle: "خدمة الإفتقاد",
-      serviceLink: "/",
-      serviceSubtitle:
-        "تعليم العقيدة الأرثوذكسية القبطية للكنيسة والألحان القبطية وطقس الكنيسة",
-    },
-  ];
-
   const [currentPage, setCurrentPage] = useState<number>(1);
   const servicesPerPage = 4;
   // calculate the index range for services to display
@@ -146,10 +32,10 @@ export default function Services() {
       >
         <SectionHeader title="خدمات الكنيسة" align="center" color="blue" />
       </SectionTitle>
-      <div className="flex items-center justify-center flex-wrap w-full py-6 gap-10 lg:px-0 px-5">
+      <div className="flex items-center justify-center flex-wrap w-full py-6 gap-10 lg:px-0 px-8">
         {currentServices.map((service, index) => (
           <div
-            className="lg:w-[579px] lg:h-[430px] w-full h-[200px] bg-cover rounded-2xl shadow-lg drop-shadow-lg overflow-hidden relative transition-transform duration-300 transform hover:scale-105"
+            className="lg:w-[579px] lg:h-[430px] w-full h-[250px] bg-cover rounded-2xl shadow-lg drop-shadow-lg overflow-hidden relative transition-transform duration-300 transform hover:scale-105"
             key={index}
             style={{
               backgroundImage: `url(${service.serviceImg})`,

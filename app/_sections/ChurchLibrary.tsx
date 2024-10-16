@@ -1,35 +1,9 @@
 import Image from "next/image";
 import { SectionHeader } from "../_components/SectionHeader";
 import Link from "next/link";
+import { books } from "../_data/books";
 
 export default function ChurchLibrary() {
-  const books = [
-    {
-      maintitle: "فصل الانبا انطونيوس",
-      subTitle: "مدرسة الشمامسة",
-      logo: "/image/newLogo.png",
-      image: "/image/bookBg01.png",
-      link: "/",
-      featured: true,
-    },
-    {
-      maintitle: "فصل الشهيد فيلوباتير مارقوريوس",
-      subTitle: "مدرسة الشمامسة",
-      logo: "/image/newLogo.png",
-      image: "/image/bookBg03.png",
-      link: "/",
-      featured: true,
-    },
-    {
-      maintitle: "فصل الشهيد ابانوب",
-      subTitle: "مدرسة الشمامسة",
-      logo: "/image/newLogo.png",
-      image: "/image/bookBg02.png",
-      link: "/",
-      featured: true,
-    },
-  ];
-
   const featuredBooks = books.filter((book) => book.featured);
 
   return (
