@@ -38,7 +38,7 @@ export default function ChurchHistory() {
 
       {/* Timeline Content */}
       <div
-        className="w-screen h-[600px] lg:h-[700px] relative overflow-hidden relative"
+        className="w-screen h-fit lg:h-[700px]  overflow-hidden relative"
         style={{
           backgroundImage: `url('${events[currentIndex].image}')`,
           backgroundRepeat: "no-repeat",
@@ -46,7 +46,7 @@ export default function ChurchHistory() {
           backgroundPosition: "center center",
         }}
       >
-        <div className="w-full h-full bg-black/50 px-5 py-10 flex items-center lg:gap-10 gap-5 flex-col lg:flex-row">
+        <div className="w-full h-full bg-black/60 px-5 py-10 flex items-center lg:gap-10 gap-5 flex-col lg:flex-row">
           {/* Timeline with Years */}
           <div className="lg:h-full lg:w-52 w-full text-white">
             <div className="w-full h-full flex items-center justify-center gap-2 py-2 flex-col lg:flex-row">
@@ -114,8 +114,8 @@ export default function ChurchHistory() {
           </div>
 
           {/* Event Details */}
-          <div className="flex-1 h-full flex flex-col justify-center text-white max-w-xl space-y-5 items-center lg:items-start">
-            <p className="text-lg leading-relaxed">
+          <div className="flex-1 h-full flex flex-col justify-center text-white max-w-xl space-y-5 items-center lg:items-start px-5 lg:px-0">
+            <p className="text-xl font-semibold leading-relaxed text-justify">
               {events[currentIndex].description}
             </p>
             <span className="text-sm font-bold italic underline">

@@ -29,7 +29,7 @@ export default function News() {
       >
         <SectionHeader title="اخبار الكنيسة" align="center" color="blue" />
       </SectionTitle>
-      <div className="my-5  flex flex-col items-center justify-center gap-10 ">
+      <div className="my-5 mx-10 lg:mx-0 flex flex-col items-center justify-center gap-10 ">
         {currentNews.map((newItem, index) => (
           <div key={index}>
             <div className=" flex lg:flex-row flex-col items-center justify-center h-[500px] w-full lg:mx-5 lg:h-[304px]  lg:w-[1120px]  overflow-hidden bg-[#D9D9D944] rounded-xl shadow-2xl drop-shadow-xl gap-5 lg:gap-0 transition-transform duration-300 transform hover:scale-105">
@@ -42,7 +42,7 @@ export default function News() {
                 }}
               ></div>
 
-              <div className=" w-full flex flex-col justify-center lg:gap-5 gap-2 px-5 almarai">
+              <div className=" w-full flex flex-col justify-center lg:gap-5 gap-2 px-5 almarai pb-5">
                 <h1 className="w-full text-center text-[20px] lg:text-[40px] font-extrabold text-[#1E60BC]">
                   {newItem.maintitle}
                 </h1>

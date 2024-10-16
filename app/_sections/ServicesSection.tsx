@@ -19,7 +19,7 @@ export default function ServicesSection() {
     }, 10000);
 
     return () => clearInterval(id);
-  }, [services.length]);
+  }, []);
 
   const changeService = (direction: "forward" | "backward") => {
     setCurrentIndex((prevIndex) => {
@@ -51,17 +51,17 @@ export default function ServicesSection() {
             onClick={() => setHovered(true)}
             priority // Improved loading performance
           />
-          <div className="absolute bottom-0 right-0 bg-[#185BB7]/60 w-full rounded-br-2xl rounded-bl-2xl flex flex-col items-center justify-center py-2 cursor-default px-2 lg:px-0 text-center gap-2 lg:gap-0">
+          <div className="absolute bottom-0 right-0 bg-[#185BB7]/60 w-full rounded-br-2xl rounded-bl-2xl flex flex-col items-center justify-center py-2 cursor-default px-2 lg:px-0 text-center gap-2 lg:gap-0 h-[100px] lg:h-[200px]">
             <Link
               href={services[currentIndex].serviceLink}
-              className="kufam text-white text-[8px] lg:text-[30px] font-black"
+              className="kufam text-white text-[12px] lg:text-[30px] font-black"
             >
               {services[currentIndex].serviceTitle}
             </Link>
-            <p className="text-white cairo text-[11px] lg:text-[25px] font-light">
+            <p className="text-white cairo text-[12px] lg:text-[25px] font-light">
               {services[currentIndex].serviceSubtitle}
             </p>
-            <button className="px-[30px] py-[5px] mt-1 bg-white text-[#1E60BC] lalezar-regular text-[25px] lg:text-[30px] rounded-3xl ">
+            <button className="px-[30px] py-[5px] mt-1 bg-white text-[#1E60BC] lalezar-regular text-[15px] lg:text-[30px] rounded-3xl ">
               قراءة المزيد
             </button>
           </div>
