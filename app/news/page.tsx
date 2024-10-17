@@ -4,6 +4,7 @@ import SectionTitle from "../_components/SectionTitle";
 import { SectionHeader } from "../_components/SectionHeader";
 import Pagentation from "../_components/Pagentation";
 import { news } from "../_data/news";
+import { useRouter } from "next/navigation";
 
 export default function News() {
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -15,12 +16,14 @@ export default function News() {
 
   //calcaulate total pages
   const totalPages = Math.ceil(news.length / newsPerPage);
+  const router = useRouter();
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
+    router.push("#firstNew");
   };
   return (
-    <div>
+    <div id="firstNew">
       <SectionTitle
         flexDirection="flex-row"
         items="items-center"

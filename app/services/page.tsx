@@ -4,6 +4,7 @@ import SectionTitle from "../_components/SectionTitle";
 import { SectionHeader } from "../_components/SectionHeader";
 import Pagentation from "../_components/Pagentation";
 import { services } from "../_data/services";
+import { useRouter } from "next/navigation";
 
 export default function Services() {
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -15,15 +16,17 @@ export default function Services() {
     indexOfFirstService,
     indexOfLastService
   );
+  const router = useRouter();
 
   //calcaulate total pages
   const totalPages = Math.ceil(services.length / servicesPerPage);
 
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
+    router.push("#serviceFirst");
   };
   return (
-    <div>
+    <div id="serviceFirst">
       <SectionTitle
         flexDirection="flex-row"
         items="items-center"

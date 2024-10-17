@@ -33,11 +33,14 @@ export default function Pagentation({
 
   pageNumbers.push(totalPages);
   return (
-    <div className="flex justify-center items-center space-x-2 my-5">
+    <div className="flex justify-center items-center space-x-1 lg:space-x-2 my-5">
       {pageNumbers.map((number, index) => {
         if (number === "...") {
           return (
-            <span key={index} className="text-gray-400 text-[45px] almarai">
+            <span
+              key={index}
+              className="text-gray-400 text-[25px] lg:text-[45px] almarai"
+            >
               ...
             </span>
           );
@@ -50,7 +53,7 @@ export default function Pagentation({
               currentPage === number
                 ? "bg-blue-500 text-white"
                 : "bg-blue-100 text-blue-500"
-            } px-6 py-2 rounded-md mx-1 text-[45px] almarai`}
+            } lg:px-6 lg:py-2 px-3 py-1 rounded-md mx-1 text-[25px] lg:text-[45px] almarai`}
           >
             {number}
           </button>

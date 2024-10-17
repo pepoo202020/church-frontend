@@ -6,6 +6,7 @@ import Link from "next/link";
 import Image from "next/image";
 import Pagentation from "../_components/Pagentation";
 import { books } from "../_data/books";
+import { useRouter } from "next/navigation";
 
 export default function Library() {
   const [currentPage, setCurrentPage] = useState<number>(1);
@@ -18,11 +19,14 @@ export default function Library() {
   //calcaulate total pages
   const totalPages = Math.ceil(books.length / booksPerPage);
 
+  const router = useRouter();
+
   const handlePageChange = (page: number) => {
     setCurrentPage(page);
+    router.push("#firstBook");
   };
   return (
-    <div>
+    <div id="firstBook">
       <SectionTitle
         flexDirection="flex-row"
         items="items-center"
