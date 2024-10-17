@@ -30,6 +30,6 @@ export const fathers: FATHERSIF[] = [
     name: "القس المتنيح بيتر توفيق",
     date: "تاريخ الرسامة: 01/01/1996",
     image: "/image/fathers/peter.jpg",
-    endDate: "تاريخ النياحة: 01/01/1996",
+    endDate: "تاريخ النياحة: 13/04/2021",
   },
 ];
