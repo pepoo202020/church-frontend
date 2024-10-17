@@ -1,4 +1,4 @@
-interface NEWIF {
+export interface NEWIF {
   maintitle: string;
   subTitle: string;
   logo: string;

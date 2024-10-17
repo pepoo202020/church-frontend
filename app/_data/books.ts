@@ -1,4 +1,4 @@
-interface BOOKIF {
+export interface BOOKIF {
   maintitle: string;
   subTitle: string;
   logo: string;
